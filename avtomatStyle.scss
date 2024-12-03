@@ -1,0 +1,134 @@
+$mar: 20px;
+$blue: #007bff;
+$hoverBlue: #0056b3;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-container {
+    margin-bottom: $mar;
+}
+
+.header {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: $mar;
+}
+
+@media (min-width: 600px) {
+    .products-list { 
+        display: grid;
+        grid-column-gap: 80px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto;
+        list-style: none;
+        padding: 0px 80px;
+    }
+    .product { 
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+        color: #555;
+        background-color: white;
+        text-align: center;
+    }
+}
+@media (max-width: 599px) {
+    .products-list { 
+        display: block;
+        list-style: none;
+        padding: 0;
+    }
+    .product { 
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        color: #555;
+        background-color: white;
+        text-align: center;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.selector-container {
+    margin-bottom: $mar;
+}
+
+.slctr {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.to-pay-container {
+    margin-bottom: $mar;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.button-container {
+    margin-bottom: $mar;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: $blue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: $hoverBlue;
+        }
+        &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        &:last-child {
+            background-color: #787878;
+            color: #ffffff;
+            &:hover {
+                background-color: #505050;
+            }
+            &:disabled {
+                background-color: #acacac;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+%sum {
+    font-size: 1rem;
+    color: #333333;
+    margin: 5px 0;
+}
+
+.current-sum {
+    @extend %sum;
+}
+
+.rest {
+    @extend %sum;
+    font-weight: bold;
+    color: #007bff;
+}

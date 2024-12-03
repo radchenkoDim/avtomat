@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 70%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products-container {
+  margin-bottom: 20px;
+}
+
+.header {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .products-list {
+    display: grid;
+    grid-column-gap: 80px;
+    grid-row-gap: 5px;
+    grid-template-columns: auto auto;
+    list-style: none;
+    padding: 0px 80px;
+  }
+  .product {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    background-color: white;
+    text-align: center;
+  }
+}
+@media (max-width: 599px) {
+  .products-list {
+    display: block;
+    list-style: none;
+    padding: 0;
+  }
+  .product {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    background-color: white;
+    text-align: center;
+  }
+  .product:last-child {
+    border-bottom: none;
+  }
+}
+.selector-container {
+  margin-bottom: 20px;
+}
+
+.slctr {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.to-pay-container {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.button-container {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.button-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button-container button:hover {
+  background-color: #0056b3;
+}
+.button-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.button-container button:last-child {
+  background-color: #787878;
+  color: #ffffff;
+}
+.button-container button:last-child:hover {
+  background-color: #505050;
+}
+.button-container button:last-child:disabled {
+  background-color: #acacac;
+  cursor: not-allowed;
+}
+
+.rest, .current-sum {
+  font-size: 1rem;
+  color: #333333;
+  margin: 5px 0;
+}
+
+.rest {
+  font-weight: bold;
+  color: #007bff;
+}/*# sourceMappingURL=avtomatStyle.css.map */
