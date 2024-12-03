@@ -161,4 +161,5 @@ async function loadProduct() {
     button.appendChild(resetButton);
 })();
 
-loadProduct()
+loadProduct();
+console.log('hello');
