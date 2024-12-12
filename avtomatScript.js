@@ -139,6 +139,16 @@ function nullF() {
         resetButton.disabled = false;
         clearChangeDisplay();
         nullF();
+
+        const allUnchecked = Array.from(checkboxes).every(checkbox => !checkbox.checked);
+        const buttons = document.querySelectorAll('.button');
+        if (allUnchecked) {
+            buttonDisabled(buttons, true); // Заблокувати всі кнопки
+            resetButton.disabled = true; // Заблокувати кнопку скидання
+            toPayOutput.textContent = `To pay: --`; // Оновити текст
+        } else {
+            buttonDisabled(buttons, false); // Розблокувати всі кнопки
+        }
     });
     
     banknotesData.forEach(nominal => {
