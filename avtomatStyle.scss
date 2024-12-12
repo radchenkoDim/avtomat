@@ -43,7 +43,7 @@ body {
         border-bottom: 1px solid #ddd;
         color: #555;
         background-color: white;
-        text-align: center;
+        text-align: left;
     }
 }
 @media (max-width: 599px) {
@@ -57,7 +57,7 @@ body {
         border-bottom: 1px solid #ddd;
         color: #555;
         background-color: white;
-        text-align: center;
+        text-align: left;
         &:last-child {
             border-bottom: none;
         }
