@@ -27,6 +27,13 @@ function buttonDisabled(button, bool) {
     });
 };
 
+function disableAllButton(bool) {
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(item => {
+        item.disabled = bool;
+    });
+}
+
 function calculateChange(change, banknotes) { 
     const result = {};
     banknotes.forEach(nominal => {
@@ -169,11 +176,10 @@ function nullF() {
     resetButton.addEventListener('click', () => {
         uncheckAllCheckboxes();
         nullF();
-        const buttons = document.querySelectorAll('.button');
-        buttonDisabled(buttons, true);
+        disableAllButton(true);
         resetButton.disabled = true;
         toPayOutput.textContent = `To pay: --`;
-    }); // На натискання кнопки зброс чекбоксів
+    });
     buttonContainer.appendChild(resetButton);
 })();
 
